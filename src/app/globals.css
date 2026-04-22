@@ -87,6 +87,13 @@ body {
 }
 .skip-link:focus-visible { translate: 0 0; }
 
+/* Hide scrollbar while keeping scroll functionality */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
 /* Utility classes */
 .font-display  { font-family: var(--font-cormorant), Georgia, serif; }
 .font-sans-alt { font-family: var(--font-jost), system-ui, sans-serif; }

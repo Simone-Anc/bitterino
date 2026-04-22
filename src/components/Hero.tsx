@@ -9,19 +9,37 @@ export default function Hero() {
   const a = !shouldReduceMotion;
 
   return (
-    /*
-     * Flex-row on desktop: section stretches to min-h-screen.
-     * Children get height from flex stretch → Image fill resolves correctly.
-     * Flex-col on mobile: image has explicit h-72.
-     */
-    <section
-      aria-label="Presentazione Bitterino"
-      className="flex flex-col md:flex-row min-h-screen"
-    >
-      {/* ── Left: text (bottom on mobile, left on desktop) ── */}
-      <div className="order-2 md:order-1 md:w-1/2 flex flex-col justify-center
-                      px-8 md:px-16 lg:px-24 py-24 bg-cream">
+    <section aria-label="Presentazione Bitterino" className="relative flex md:flex-row min-h-screen">
 
+      {/* ── IMAGE: fullscreen on mobile (absolute), right half on desktop ── */}
+      <div className="absolute inset-0 md:relative md:inset-auto md:order-2 md:flex-1 overflow-hidden">
+        <Image
+          src="/photo/hero.jpg"
+          alt="Interno di Bitterino: divano giallo, tavolo bianco, cocktail al tramonto"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+        {/* Mobile: dark gradient bottom-to-top so text is readable over image */}
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10 md:hidden"
+          aria-hidden="true"
+        />
+        {/* Desktop: gradient left-to-right to blend with text panel */}
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-cream/70 via-transparent to-transparent hidden md:block"
+          aria-hidden="true"
+        />
+      </div>
+
+      {/* ── TEXT: over image on mobile (z-10), left panel on desktop ── */}
+      <div
+        className="relative z-10 md:z-auto md:order-1 md:w-1/2 md:bg-cream
+                   flex flex-col justify-end md:justify-center
+                   px-8 md:px-16 lg:px-24
+                   pb-16 pt-32 md:py-24"
+      >
         <motion.div
           initial={a ? { opacity: 0, y: 16 } : false}
           animate={{ opacity: 1, y: 0 }}
@@ -34,7 +52,8 @@ export default function Hero() {
           initial={a ? { opacity: 0 } : false}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="font-sans-alt text-[10px] tracking-[0.65em] uppercase text-terra-ui mt-8 mb-4"
+          className="font-sans-alt text-[10px] tracking-[0.65em] uppercase mt-8 mb-4
+                     text-cream/70 md:text-terra-ui"
           aria-hidden="true"
         >
           Cocktail Bar · Roma
@@ -44,7 +63,8 @@ export default function Hero() {
           initial={a ? { opacity: 0, y: 30 } : false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          className="font-display text-[clamp(4rem,8vw,7rem)] font-light text-brown-1 leading-none mb-6"
+          className="font-display text-[clamp(4.5rem,12vw,7rem)] font-light leading-none mb-6
+                     text-cream md:text-brown-1"
         >
           Bitter
           <span className="terra-gradient font-semibold italic">ino</span>
@@ -56,7 +76,8 @@ export default function Hero() {
           initial={a ? { opacity: 0 } : false}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.85 }}
-          className="font-display text-xl font-light text-brown-2 italic leading-relaxed max-w-sm mb-10"
+          className="font-display text-xl font-light italic leading-relaxed max-w-sm mb-10
+                     text-cream/80 md:text-brown-2"
         >
           Popolare ma non troppo.
           <br />
@@ -81,40 +102,13 @@ export default function Hero() {
           <a
             href="#about"
             className="font-sans-alt text-[11px] tracking-[0.3em] uppercase px-9 py-4
-                       border border-cream-dark text-brown-3
-                       hover:border-terra-ui hover:text-terra-ui transition-colors duration-200"
+                       border text-cream border-cream/40 hover:border-cream hover:text-cream
+                       md:border-cream-dark md:text-brown-3 md:hover:border-terra-ui md:hover:text-terra-ui
+                       transition-colors duration-200"
           >
             Il Locale
           </a>
         </motion.div>
-      </div>
-
-      {/* ── Right: image (top on mobile, right on desktop) ── */}
-      {/*
-       * h-72 gives 288px on mobile (explicit height → fill works).
-       * md:flex-1 lets flexbox stretch it to the full section height (100vh+).
-       */}
-      <div className="order-1 md:order-2 relative h-72 md:h-auto md:flex-1 overflow-hidden">
-        <Image
-          src="/photo/hero.jpg"
-          alt="Interno di Bitterino: divano giallo, tavolo bianco, cocktail al tramonto"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
-        {/* Gradient left-to-right to blend with text panel on desktop */}
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-cream/60 via-transparent to-transparent
-                     hidden md:block"
-          aria-hidden="true"
-        />
-        {/* Gradient top for mobile readability */}
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-cream/40
-                     md:hidden"
-          aria-hidden="true"
-        />
       </div>
     </section>
   );
