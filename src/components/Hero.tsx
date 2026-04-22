@@ -81,9 +81,7 @@ export default function Hero() {
           className="flex flex-wrap gap-3"
         >
           <a
-            href="/api/menu"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/menu"
             className="font-sans-alt text-[11px] tracking-[0.3em] uppercase px-9 py-4
                        bg-terra-ui text-cream hover:bg-terra transition-colors duration-200"
           >

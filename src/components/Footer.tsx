@@ -44,9 +44,7 @@ export default function Footer() {
             ))}
             <li>
               <a
-                href="/api/menu"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/menu"
                 className="font-sans-alt text-xs text-cream/40 hover:text-cream/80 transition-colors duration-200"
               >
                 Menu

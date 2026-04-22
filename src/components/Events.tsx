@@ -2,27 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
+import events from "@/data/events.json";
 
-const events = [
-  {
-    when: "Ogni venerdì",
-    title: "Jazz Night",
-    desc: "Live jazz in sottofondo, cocktail speciali della serata e un'atmosfera senza tempo.",
-    time: "21:00 — 01:00",
-  },
-  {
-    when: "Ogni sabato",
-    title: "Bartender's Choice",
-    desc: "Lascia fare al nostro bartender: descriviti un umore e ricevi il drink perfetto per te.",
-    time: "20:00 — chiusura",
-  },
-  {
-    when: "Ultimo giovedì del mese",
-    title: "Masterclass",
-    desc: "Impara a preparare cocktail come un professionista. Posti limitati, iscrizione obbligatoria.",
-    time: "19:30 — 21:30",
-  },
-];
 
 export default function Events() {
   const ref = useRef<HTMLDivElement>(null);

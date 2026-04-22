@@ -72,9 +72,7 @@ export default function Navbar() {
               ))}
               <li>
                 <a
-                  href="/api/menu"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/menu"
                   className="font-sans-alt text-[11px] tracking-[0.25em] uppercase px-5 py-2.5 bg-terra-ui text-cream hover:bg-terra transition-colors duration-200"
                 >
                   Menu
@@ -143,9 +141,7 @@ export default function Navbar() {
                 ))}
                 <li>
                   <motion.a
-                    href="/api/menu"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/menu"
                     initial={animate ? { y: 20, opacity: 0 } : false}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: 20, opacity: 0 }}

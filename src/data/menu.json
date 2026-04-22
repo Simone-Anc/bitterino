@@ -1,0 +1,49 @@
+[
+  {
+    "category": "Signature",
+    "items": [
+      { "name": "Negroni Amaro",    "desc": "Gin London Dry, Campari riserva, vermouth rosso invecchiato. Un classico reinterpretato.",           "price": 14, "tag": "Best seller" },
+      { "name": "Sour Fumé",        "desc": "Whisky affumicato, sciroppo di miele selvatico, limone fresco, albume d'uovo biologico.",            "price": 15, "tag": null },
+      { "name": "Mezcal Mule",      "desc": "Mezcal artigianale, ginger beer, lime, sale di worm e peperoncino habanero.",                        "price": 16, "tag": null },
+      { "name": "Black Velvet",     "desc": "Gin infuso al carbone vegetale, violet liqueur, tonic water, lavanda essiccata.",                    "price": 15, "tag": "Nuovo" },
+      { "name": "Bitter Sunset",    "desc": "Aperol, Campari, succo di arancia rossa, sciroppo di zucchero di canna, acqua frizzante.",           "price": 13, "tag": null },
+      { "name": "Roma Sour",        "desc": "Whisky bourbon, limone, miele di castagno, albume, bitter all'arancia.",                             "price": 15, "tag": null }
+    ]
+  },
+  {
+    "category": "Stagionale",
+    "items": [
+      { "name": "Garden Spritz",    "desc": "Prosecco Doc, liquore al basilico, cetriolo, acqua tonica e fiori eduli.",                           "price": 13, "tag": "Stagionale" },
+      { "name": "Tropical Daiquiri","desc": "Rum bianco agricolo, mango fresco, passion fruit, lime, zucchero di canna grezzo.",                  "price": 14, "tag": null },
+      { "name": "Hibiscus Fizz",    "desc": "Gin, sciroppo di ibisco, succo di pompelmo, acqua tonica, rosmarino.",                               "price": 13, "tag": null }
+    ]
+  },
+  {
+    "category": "Classici",
+    "items": [
+      { "name": "Negroni",          "desc": "Gin, vermouth rosso, Campari. Servito con scorza d'arancia.",                                        "price": 12, "tag": null },
+      { "name": "Aperol Spritz",    "desc": "Aperol, Prosecco Doc, acqua frizzante, fetta d'arancia.",                                            "price": 10, "tag": null },
+      { "name": "Mojito",           "desc": "Rum bianco, menta fresca, lime, zucchero di canna, acqua frizzante.",                                "price": 11, "tag": null },
+      { "name": "Moscow Mule",      "desc": "Vodka, ginger beer, lime, menta.",                                                                   "price": 11, "tag": null },
+      { "name": "Gin Tonic",        "desc": "Gin premium a scelta, tonic water, guarnizione stagionale.",                                         "price": 12, "tag": null },
+      { "name": "Old Fashioned",    "desc": "Bourbon, zucchero, Angostura bitter, scorza d'arancia.",                                             "price": 13, "tag": null }
+    ]
+  },
+  {
+    "category": "Analcolici",
+    "items": [
+      { "name": "Virgin Mule",      "desc": "Ginger beer artigianale, lime fresco, menta, acqua frizzante.",                                      "price": 8,  "tag": null },
+      { "name": "Citrus Cooler",    "desc": "Succo di arancia e pompelmo, sciroppo di vaniglia, acqua tonica, basilico.",                         "price": 8,  "tag": null },
+      { "name": "Berry Smash",      "desc": "Frutti di bosco misti, limone, sciroppo di miele, acqua frizzante.",                                 "price": 8,  "tag": null }
+    ]
+  },
+  {
+    "category": "Snack",
+    "items": [
+      { "name": "Tagliere Salumi",  "desc": "Selezione di salumi artigianali italiani con pane casereccio.",                                      "price": 14, "tag": null },
+      { "name": "Bruschette (3)",   "desc": "Pomodoro e basilico, nduja e stracciatella, crema di ceci e paprika.",                               "price": 10, "tag": null },
+      { "name": "Olive Marinate",   "desc": "Olive miste marinate con erbe aromatiche e scorza di limone.",                                       "price": 6,  "tag": null },
+      { "name": "Fritto Misto Bar", "desc": "Zucchine, fiori di zucca, alici, servito con maionese al limone.",                                   "price": 12, "tag": null }
+    ]
+  }
+]
