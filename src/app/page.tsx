@@ -28,9 +28,6 @@ export default async function Home() {
         {/* 1 — Prima impressione */}
         <Hero />
 
-        {/* 2 — Numeri rapidi, break visivo scuro */}
-        <Stats />
-
         {/* 3 — Storia e valori del locale */}
         <About />
 
