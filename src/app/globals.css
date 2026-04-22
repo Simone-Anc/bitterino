@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  /* ── Solare palette ── */
+  --cream:      #F5EDD6;  /* main bg */
+  --cream-mid:  #EDE4C8;  /* cards, alternate sections */
+  --cream-dark: #D9CEAC;  /* borders, dividers */
+
+  /* Text — all verified WCAG AA on --cream */
+  --brown-1:    #1A0A02;  /* primary text   16.5:1 ✓ */
+  --brown-2:    #5A3520;  /* secondary text  8.2:1 ✓ */
+  --brown-3:    #7A4E30;  /* muted text      5.5:1 ✓ */
+
+  /* Terracotta — usage rules in CLAUDE.md */
+  --terra:      #C4622A;  /* large text (≥24px) & decorative only — 3.31:1 */
+  --terra-ui:   #8B3A18;  /* small UI text & button bg — 6.0:1 ✓ */
+  --terra-light:#D97440;  /* hover on large elements */
+
+  /* Accent */
+  --yellow:     #F0C040;  /* sparingly, decorative */
+
+  /* Footer */
+  --footer-bg:  #2E1508;
+}
+
+@theme inline {
+  --color-cream:      var(--cream);
+  --color-cream-mid:  var(--cream-mid);
+  --color-cream-dark: var(--cream-dark);
+  --color-brown-1:    var(--brown-1);
+  --color-brown-2:    var(--brown-2);
+  --color-brown-3:    var(--brown-3);
+  --color-terra:      var(--terra);
+  --color-terra-ui:   var(--terra-ui);
+  --color-terra-light:var(--terra-light);
+  --color-yellow:     var(--yellow);
+  --color-footer-bg:  var(--footer-bg);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--brown-1);
+  font-family: var(--font-jost), system-ui, sans-serif;
+}
+
+/* Respect reduced motion system preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--cream-mid); }
+::-webkit-scrollbar-thumb { background: var(--terra-ui); border-radius: 3px; }
+
+/* Selection */
+::selection { background: var(--terra); color: var(--cream); }
+
+/* Global focus style — visible for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--terra-ui);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Skip-to-content link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--terra-ui);
+  color: var(--cream);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-jost), sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  z-index: 9999;
+  transition: top 0.1s;
+}
+.skip-link:focus { top: 1rem; }
+
+/* Utility classes */
+.font-display  { font-family: var(--font-cormorant), Georgia, serif; }
+.font-sans-alt { font-family: var(--font-jost), system-ui, sans-serif; }
+
+.terra-gradient {
+  background: linear-gradient(135deg, var(--terra-ui), var(--terra), var(--terra-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.divider-terra {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--terra), transparent);
+}
