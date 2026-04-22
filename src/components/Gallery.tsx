@@ -123,7 +123,6 @@ export default function Gallery({ posts }: Props) {
           >
             @bitterinoroma
           </a>{" "}
-          per le foto più recenti
         </motion.p>
       </div>
     </section>

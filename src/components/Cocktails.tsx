@@ -122,7 +122,7 @@ export default function Cocktails() {
           className="text-center mt-12"
         >
           <a
-            href="/menu"
+            href="/menu.pdf"
             className="font-sans-alt text-[11px] tracking-[0.3em] uppercase px-10 py-4 border border-terra-ui text-terra-ui hover:bg-terra-ui hover:text-cream transition-colors duration-200 inline-block"
           >
             Menu Completo

@@ -15,7 +15,12 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/api/menu)",
       "Bash(curl -v http://localhost:3000/api/menu)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code} %{redirect_url}\" http://localhost:3000/api/menu)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code} %{redirect_url}\" http://localhost:3000/api/menu)",
+      "Bash(identify /Users/simone/Progetti/bitterino/public/photo/logo.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/simone/Progetti/bitterino/public/photo/logo.png)",
+      "Bash(sips -c 522 522 /Users/simone/Progetti/bitterino/public/photo/logo.png --out /tmp/logo_square.png)",
+      "Bash(sips -z 512 512 /tmp/logo_square.png --out /Users/simone/Progetti/bitterino/src/app/icon.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/simone/Progetti/bitterino/src/app/icon.png)"
     ]
   }
 }
