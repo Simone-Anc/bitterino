@@ -4,16 +4,10 @@ import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 
 const HOURS_TABLE = [
-  { days: "Lunedì — Giovedì", time: "18:00 — 02:00" },
-  { days: "Venerdì — Sabato", time: "18:00 — 03:00" },
-  { days: "Domenica",         time: "18:00 — 01:00" },
+  { days: "Lunedì — Giovedì", time: "18:00 — 00:00" },
+  { days: "Venerdì — Domenica", time: "18:00 — 02:00" },
 ];
 
-const SERVICES = [
-  "Cibo al bar",
-  "Happy hour",
-  "Cani ammessi",
-];
 
 const GOOGLE_MAPS_EMBED_URL =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.330649754334!2d12.5115634!3d41.8857456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f610281ae39d3%3A0x1e6b89ec7c5bbf60!2sBitterino!5e0!3m2!1sit!2sit!4v1776864191438!5m2!1sit!2sit";
@@ -86,23 +80,6 @@ export default function Contact() {
                   </div>
                 ))}
               </dl>
-            </div>
-
-            {/* Services */}
-            <div>
-              <p className="font-sans-alt text-[9px] tracking-[0.5em] uppercase text-terra-ui mb-4">
-                Servizi
-              </p>
-              <ul className="flex flex-wrap gap-2" aria-label="Servizi disponibili">
-                {SERVICES.map((s) => (
-                  <li
-                    key={s}
-                    className="font-sans-alt text-[10px] tracking-[0.2em] uppercase text-brown-3 border border-cream-dark px-3 py-1.5"
-                  >
-                    {s}
-                  </li>
-                ))}
-              </ul>
             </div>
 
             {/* Links */}

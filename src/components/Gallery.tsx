@@ -28,7 +28,7 @@ export default function Gallery({ posts }: Props) {
 
   const hasRealPosts = posts && posts.length > 0;
   const items = hasRealPosts
-    ? posts.slice(0, 6).map((p) => ({
+    ? posts.slice(0, 4).map((p) => ({
         src: p.thumbnail_url ?? p.media_url,
         alt: p.caption ? p.caption.slice(0, 100) : "Post Instagram di Bitterino",
         href: p.permalink,

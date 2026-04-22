@@ -52,7 +52,7 @@ export default function Philosophy() {
           </p>
           <footer className="mt-6">
             <cite className="font-sans-alt text-[10px] tracking-[0.5em] uppercase text-terra-ui not-italic">
-              — Il team di Bitterino
+              — Bitterino
             </cite>
           </footer>
         </motion.blockquote>
