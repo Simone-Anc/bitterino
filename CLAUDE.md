@@ -31,6 +31,30 @@ Il design system scelto è **Mockup A — Solare**: sfondo crema, accenti terrac
 - Sezioni alternate: `--cream` e `--cream-mid`
 - Footer: dark brown (`#2E1508`) con testo cream
 
+## Stack tecnologico
+
+| Livello | Tecnologia |
+|---|---|
+| Framework | Next.js 16.2+ (App Router, React Server Components, ISR) |
+| Linguaggio | TypeScript strict mode |
+| Stile | Tailwind CSS v4 (`@import "tailwindcss"` + `@theme inline` — no tailwind.config.ts) |
+| Animazioni | Framer Motion — sempre con `useReducedMotion()` |
+| Immagini | Next.js `<Image>` con `fill` + `remotePatterns` per Instagram CDN |
+| Font | Cormorant Garamond + Jost via Google Fonts (next/font/google) |
+| Sicurezza | `src/proxy.ts` (export `proxy`, non `middleware`) — CSP, HSTS, Referrer-Policy |
+| Deploy | Vercel (ISR revalidation 3600s per feed Instagram) |
+| Env vars | `INSTAGRAM_ACCESS_TOKEN`, `NEXT_PUBLIC_MENU_PDF_URL` |
+
+### File chiave
+- `src/proxy.ts` — security headers e CSP (Next.js 16: export si chiama `proxy`, non `middleware`)
+- `src/lib/instagram.ts` — fetch tipizzato Instagram Basic Display API, ISR revalidate 3600s
+- `src/app/page.tsx` — async server component, fetcha post Instagram e li passa a `<Gallery>`
+- `src/app/globals.css` — CSS variables e `@theme inline` Tailwind v4
+
+## 8-Point Grid (obbligatorio)
+
+Tutto lo spacing e le dimensioni UI devono essere multipli di 8px. Usare le classi Tailwind corrispondenti: `p-2` (8px), `p-4` (16px), `p-6` (24px), `p-8` (32px), `p-10` (40px), `p-12` (48px), `p-16` (64px), `p-24` (96px), `p-28` (112px). Non usare valori arbitrari come `p-5`, `p-7`, `p-9` ecc. salvo eccezioni giustificate.
+
 ## Accessibilità (WCAG 2.1 AA — obbligatorio)
 
 Ogni componente UI scritto o modificato deve rispettare le linee guida WCAG 2.1 livello AA:

@@ -5,14 +5,16 @@ import About       from "@/components/About";
 import Philosophy  from "@/components/Philosophy";
 import Gallery     from "@/components/Gallery";
 import Cocktails   from "@/components/Cocktails";
-import MenuQR      from "@/components/MenuQR";
 import Events      from "@/components/Events";
 import InstagramCTA from "@/components/InstagramCTA";
 import Contact     from "@/components/Contact";
 import Footer      from "@/components/Footer";
 import BackToTop   from "@/components/BackToTop";
+import { fetchInstagramPosts } from "@/lib/instagram";
 
-export default function Home() {
+export default async function Home() {
+  const instagramPosts = await fetchInstagramPosts(6);
+
   return (
     <>
       {/* Skip to main content — WCAG 2.1 criterion 2.4.1 */}
@@ -35,22 +37,19 @@ export default function Home() {
         {/* 4 — Filosofia / manifesto */}
         <Philosophy />
 
-        {/* 5 — Galleria fotografica */}
-        <Gallery />
+        {/* 5 — Galleria fotografica (ultimi 6 post Instagram) */}
+        <Gallery posts={instagramPosts} />
 
         {/* 6 — Cocktail signature */}
         <Cocktails />
 
-        {/* 7 — QR code e link al menu completo */}
-        <MenuQR />
-
-        {/* 8 — Serate ed eventi */}
+        {/* 7 — Serate ed eventi */}
         <Events />
 
-        {/* 9 — Instagram CTA */}
+        {/* 8 — Instagram CTA */}
         <InstagramCTA />
 
-        {/* 10 — Contatti, orari, mappa, form */}
+        {/* 9 — Contatti, orari, mappa */}
         <Contact />
       </main>
 

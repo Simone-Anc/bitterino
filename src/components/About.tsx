@@ -4,23 +4,7 @@ import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 
-const features = [
-  {
-    icon: "◈",
-    title: "Cocktail Artigianali",
-    desc: "Ogni drink è studiato nei minimi dettagli, con ingredienti freschi e tecniche d'autore.",
-  },
-  {
-    icon: "◇",
-    title: "Selezione Premium",
-    desc: "Una cantina di spirits rari e distillati d'eccellenza da ogni angolo del mondo.",
-  },
-  {
-    icon: "◉",
-    title: "Atmosfera Intima",
-    desc: "Un rifugio dall'ordinario: luce calda, musica curata, conversazioni che restano.",
-  },
-];
+
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
@@ -81,23 +65,6 @@ export default function About() {
             <div className="absolute -top-3 -right-3 w-14 h-14 border-r-2 border-t-2 border-terra/30" aria-hidden="true" />
           </motion.div>
         </div>
-
-        {/* Feature cards */}
-        <ul className="grid md:grid-cols-3 gap-6 list-none p-0 m-0" aria-label="Caratteristiche del locale">
-          {features.map((f, i) => (
-            <motion.li
-              key={f.title}
-              initial={a ? { opacity: 0, y: 24 } : false}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.55, delay: 0.2 + i * 0.12 }}
-              className="p-8 border border-cream-dark bg-cream hover:border-terra/40 transition-colors duration-300"
-            >
-              <span className="text-terra text-2xl mb-5 block" aria-hidden="true">{f.icon}</span>
-              <h3 className="font-display text-xl font-medium text-brown-1 mb-3">{f.title}</h3>
-              <p className="font-sans-alt text-xs text-brown-3 leading-relaxed font-light">{f.desc}</p>
-            </motion.li>
-          ))}
-        </ul>
       </div>
     </section>
   );

@@ -3,30 +3,38 @@
 import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import Image from "next/image";
+import type { IGPost } from "@/lib/instagram";
 
-/*
- * Sostituire con foto reali del locale:
- * src: percorso in /public  (es. "/photo/gallery-1.jpg")
- * alt: descrizione accessibile obbligatoria
- * pos: object-position CSS per ritaglio
- */
-const photos = [
-  { src: "/photo/cibo.jpg", alt: "Tavolo con cocktail al tramonto nel locale Bitterino",  pos: "center top"    },
-  { src: "/photo/cocktail.jpg", alt: "Divano giallo e atmosfera calda del bar",                pos: "left center"   },
-  { src: "/photo/shaker.jpg", alt: "Dettaglio del bancone con bicchieri e spirits",          pos: "right center"  },
-  { src: "/photo/hero.jpg", alt: "Cocktail rosso servito sul tavolo bianco",               pos: "center 30%"    },
-  { src: "/photo/hero.jpg", alt: "Vista della vetrina con la città sullo sfondo",          pos: "center bottom" },
-  { src: "/photo/hero.jpg", alt: "Interno del locale con luci calde serali",               pos: "40% center"    },
+const FALLBACK_PHOTOS = [
+  { src: "/photo/hero.jpg", alt: "Interno del locale Bitterino con atmosfera calda", pos: "center top" },
+  { src: "/photo/hero.jpg", alt: "Cocktail servito al tavolo da Bitterino",          pos: "left center" },
+  { src: "/photo/hero.jpg", alt: "Dettaglio del bancone di Bitterino",               pos: "right center" },
+  { src: "/photo/hero.jpg", alt: "Divano giallo e luci calde di Bitterino",          pos: "center 30%" },
+  { src: "/photo/hero.jpg", alt: "Vista della sala di Bitterino la sera",            pos: "center bottom" },
+  { src: "/photo/hero.jpg", alt: "Aperitivo e cocktail signature da Bitterino",      pos: "40% center" },
 ];
 
-/* Height of each grid row in px */
 const ROW_H = 240;
 
-export default function Gallery() {
+interface Props {
+  posts?: IGPost[];
+}
+
+export default function Gallery({ posts }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const reduce = useReducedMotion();
   const a = !reduce;
+
+  const hasRealPosts = posts && posts.length > 0;
+  const items = hasRealPosts
+    ? posts.slice(0, 6).map((p) => ({
+        src: p.thumbnail_url ?? p.media_url,
+        alt: p.caption ? p.caption.slice(0, 100) : "Post Instagram di Bitterino",
+        href: p.permalink,
+        pos: "center center",
+      }))
+    : FALLBACK_PHOTOS.map((p) => ({ ...p, href: "https://www.instagram.com/bitterinoroma" }));
 
   return (
     <section aria-labelledby="gallery-heading" className="py-28 px-6 bg-cream-mid">
@@ -52,7 +60,6 @@ export default function Gallery() {
         {/*
          * gridAutoRows garantisce che TUTTE le righe abbiano 240px espliciti,
          * anche su mobile con 2 colonne (3 righe totali vs 2 su desktop).
-         * Questo è fondamentale per Next.js Image con fill.
          */}
         <div
           ref={ref}
@@ -61,8 +68,7 @@ export default function Gallery() {
           role="list"
           aria-label="Galleria fotografica Bitterino"
         >
-          {photos.map((photo, i) => {
-            // Prima foto: occupa 2 righe su desktop per creare il mosaico asimmetrico
+          {items.map((item, i) => {
             const isTall = i === 0;
 
             return (
@@ -74,18 +80,30 @@ export default function Gallery() {
                 transition={{ duration: 0.5, delay: a ? i * 0.07 : 0 }}
                 className={`relative overflow-hidden group${isTall ? " md:row-span-2" : ""}`}
               >
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  style={{ objectPosition: photo.pos }}
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                />
-                <div
-                  className="absolute inset-0 bg-terra/0 group-hover:bg-terra/15 transition-colors duration-500"
-                  aria-hidden="true"
-                />
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.alt}
+                  className="block w-full h-full"
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    style={{ objectPosition: item.pos }}
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                  />
+                  <div
+                    className="absolute inset-0 bg-terra/0 group-hover:bg-terra/15 transition-colors duration-500 flex items-center justify-center"
+                    aria-hidden="true"
+                  >
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-sans-alt text-[9px] tracking-[0.4em] uppercase text-cream">
+                      Instagram ↗
+                    </span>
+                  </div>
+                </a>
               </motion.div>
             );
           })}

@@ -51,12 +51,12 @@ export default function Footer() {
           <p className="font-sans-alt text-[9px] tracking-[0.45em] uppercase text-terra/70 mb-4">
             Contatti
           </p>
-          <p className="font-sans-alt text-xs text-cream/40">Via Roma 42, Milano</p>
+          <p className="font-sans-alt text-xs text-cream/40">Largo Brindisi, 22 — Roma</p>
           <a
-            href="tel:+390200000000"
+            href="tel:+390600000000"
             className="block font-sans-alt text-xs text-cream/40 hover:text-cream/80 transition-colors duration-200"
           >
-            +39 02 000 0000
+            +39 06 000 0000
           </a>
           <a
             href="https://www.instagram.com/bitterinoroma"
