@@ -4,8 +4,8 @@ import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 
 const HOURS_TABLE = [
-  { days: "Lunedì — Giovedì", time: "18:00 — 00:00" },
-  { days: "Venerdì — Domenica", time: "18:00 — 02:00" },
+  { days: "Domenica — Giovedì", time: "18:00 — 00:00" },
+  { days: "Venerdì — Sabato", time: "18:00 — 02:00" },
 ];
 
 
