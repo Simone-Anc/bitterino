@@ -2,8 +2,6 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
-import OpenStatus from "./OpenStatus";
-
 export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
   const a = !shouldReduceMotion;
@@ -36,18 +34,10 @@ export default function Hero() {
       {/* ── TEXT: over image on mobile (z-10), left panel on desktop ── */}
       <div
         className="relative z-10 md:z-auto md:order-1 md:w-1/2 md:bg-cream
-                   flex flex-col justify-end md:justify-center
+                   flex flex-col justify-center
                    px-8 md:px-16 lg:px-24
-                   pb-16 pt-32 md:py-24"
+                   pt-32 pb-16 md:py-24"
       >
-        <motion.div
-          initial={a ? { opacity: 0, y: 16 } : false}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <OpenStatus />
-        </motion.div>
-
         <motion.p
           initial={a ? { opacity: 0 } : false}
           animate={{ opacity: 1 }}
