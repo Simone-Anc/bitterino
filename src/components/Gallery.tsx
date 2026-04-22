@@ -6,10 +6,10 @@ import Image from "next/image";
 import type { IGPost } from "@/lib/instagram";
 
 const FALLBACK_PHOTOS = [
-  { src: "/photo/hero.jpg", alt: "Interno del locale Bitterino con atmosfera calda", pos: "center top" },
-  { src: "/photo/hero.jpg", alt: "Cocktail servito al tavolo da Bitterino",          pos: "left center" },
-  { src: "/photo/hero.jpg", alt: "Dettaglio del bancone di Bitterino",               pos: "right center" },
-  { src: "/photo/hero.jpg", alt: "Divano giallo e luci calde di Bitterino",          pos: "center 30%" },
+  { src: "/photo/cibo.jpg", alt: "Interno del locale Bitterino con atmosfera calda", pos: "center top" },
+  { src: "/photo/cocktail.jpg", alt: "Cocktail servito al tavolo da Bitterino",          pos: "left center" },
+  { src: "/photo/shaker.jpg", alt: "Dettaglio del bancone di Bitterino",               pos: "right center" },
+  { src: "/photo/cibo2.jpg", alt: "Divano giallo e luci calde di Bitterino",          pos: "center 30%" },
 ];
 
 const ROW_H = 240;
