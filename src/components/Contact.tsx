@@ -98,14 +98,7 @@ export default function Contact() {
                 aria-label="Chiamaci"
                 className="font-sans-alt text-[9px] tracking-[0.4em] uppercase text-brown-3 hover:text-terra-ui transition-colors duration-200"
               >
-                +39 06 000 0000
-              </a>
-              <a
-                href="mailto:info@bitterino.it"
-                aria-label="Scrivici una email"
-                className="font-sans-alt text-[9px] tracking-[0.4em] uppercase text-brown-3 hover:text-terra-ui transition-colors duration-200"
-              >
-                info@bitterino.it
+                +39 NUMERO TELEFONO
               </a>
             </div>
           </motion.div>

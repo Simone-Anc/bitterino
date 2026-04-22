@@ -10,8 +10,6 @@ const FALLBACK_PHOTOS = [
   { src: "/photo/hero.jpg", alt: "Cocktail servito al tavolo da Bitterino",          pos: "left center" },
   { src: "/photo/hero.jpg", alt: "Dettaglio del bancone di Bitterino",               pos: "right center" },
   { src: "/photo/hero.jpg", alt: "Divano giallo e luci calde di Bitterino",          pos: "center 30%" },
-  { src: "/photo/hero.jpg", alt: "Vista della sala di Bitterino la sera",            pos: "center bottom" },
-  { src: "/photo/hero.jpg", alt: "Aperitivo e cocktail signature da Bitterino",      pos: "40% center" },
 ];
 
 const ROW_H = 240;
