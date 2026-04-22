@@ -2,51 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
-
-const signatures = [
-  {
-    name: "Negroni Amaro",
-    category: "Signature",
-    desc: "Gin London Dry, Campari riserva, vermouth rosso invecchiato. Un classico reinterpretato.",
-    price: "14",
-    tag: "Best seller",
-  },
-  {
-    name: "Sour Fumé",
-    category: "Signature",
-    desc: "Whisky affumicato, sciroppo di miele selvatico, limone fresco, albume d'uovo biologico.",
-    price: "15",
-    tag: null,
-  },
-  {
-    name: "Garden Spritz",
-    category: "Stagionale",
-    desc: "Prosecco Doc, liquore al basilico, cetriolo, acqua tonica e fiori eduli.",
-    price: "13",
-    tag: "Stagionale",
-  },
-  {
-    name: "Mezcal Mule",
-    category: "Signature",
-    desc: "Mezcal artigianale, ginger beer, lime, sale di worm e peperoncino habanero.",
-    price: "16",
-    tag: null,
-  },
-  {
-    name: "Black Velvet",
-    category: "Classic+",
-    desc: "Gin infuso al carbone vegetale, violet liqueur, tonic water, lavanda essiccata.",
-    price: "15",
-    tag: "Nuovo",
-  },
-  {
-    name: "Tropical Daiquiri",
-    category: "Stagionale",
-    desc: "Rum bianco agricolo, mango fresco, passion fruit, lime, zucchero di canna grezzo.",
-    price: "14",
-    tag: null,
-  },
-];
+import signatures from "@/data/cocktails.json";
 
 export default function Cocktails() {
   const ref = useRef<HTMLDivElement>(null);

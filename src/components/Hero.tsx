@@ -36,7 +36,7 @@ export default function Hero() {
         className="relative z-10 md:z-auto md:order-1 md:w-1/2 md:bg-cream
                    flex flex-col justify-center
                    px-8 md:px-16 lg:px-24
-                   pt-40 pb-16 md:py-24"
+                   pt-50 pb-16 md:py-24"
       >
         <motion.p
           initial={a ? { opacity: 0 } : false}
