@@ -32,7 +32,6 @@ export default function Footer() {
               { href: "#cocktails",label: "Cocktails" },
               { href: "#events",   label: "Eventi" },
               { href: "#contact",  label: "Contatti" },
-              { href: "/menu",     label: "Menu" },
             ].map((l) => (
               <li key={l.href}>
                 <a
@@ -43,6 +42,16 @@ export default function Footer() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="/api/menu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-sans-alt text-xs text-cream/40 hover:text-cream/80 transition-colors duration-200"
+              >
+                Menu
+              </a>
+            </li>
           </ul>
         </nav>
 

@@ -70,11 +70,12 @@ body {
   border-radius: 2px;
 }
 
-/* Skip-to-content link */
+/* Skip-to-content link — visibile SOLO con :focus-visible (tastiera), non via hash URL */
 .skip-link {
   position: absolute;
-  top: -100%;
+  top: 1rem;
   left: 1rem;
+  translate: 0 calc(-100% - 2rem);
   background: var(--terra-ui);
   color: var(--cream);
   padding: 0.5rem 1rem;
@@ -82,9 +83,9 @@ body {
   font-size: 13px;
   letter-spacing: 0.05em;
   z-index: 9999;
-  transition: top 0.1s;
+  transition: translate 0.1s;
 }
-.skip-link:focus { top: 1rem; }
+.skip-link:focus-visible { translate: 0 0; }
 
 /* Utility classes */
 .font-display  { font-family: var(--font-cormorant), Georgia, serif; }
