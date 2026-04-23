@@ -1,23 +1,26 @@
 [
-    {
-      "when": "Ogni venerdì",
-      "title": "Jazz Night",
-      "desc": "Live jazz in sottofondo, cocktail speciali della serata e un'atmosfera senza tempo.",
-      "time": "21:00 — 01:00",
-      "active": true
-    },
-    {
-      "when": "Ogni sabato",
-      "title": "Bartender's Choice",
-      "desc": "Lascia fare al nostro bartender: descriviti un umore e ricevi il drink perfetto per te.",
-      "time": "20:00 — chiusura",
-      "active": false
-    },
-    {
-      "when": "Ultimo giovedì del mese",
-      "title": "Masterclass",
-      "desc": "Impara a preparare cocktail come un professionista. Posti limitati, iscrizione obbligatoria.",
-      "time": "19:30 — 21:30",
-      "active": false
-    }
-  ]
+  {
+    "when": "Ogni venerdì",
+    "title": "Jazz Night",
+    "desc": "Live jazz in sottofondo, cocktail speciali della serata e un'atmosfera senza tempo.",
+    "time": "21:00 — 01:00",
+    "image": "/photo/hero.jpg",
+    "active": true
+  },
+  {
+    "when": "Ogni sabato",
+    "title": "Bartender's Choice",
+    "desc": "Lascia fare al nostro bartender: descriviti un umore e ricevi il drink perfetto per te.",
+    "time": "20:00 — chiusura",
+    "image": "/photo/cocktail.jpg",
+    "active": false
+  },
+  {
+    "when": "Ultimo giovedì del mese",
+    "title": "Masterclass",
+    "desc": "Impara a preparare cocktail come un professionista. Posti limitati, iscrizione obbligatoria.",
+    "time": "19:30 — 21:30",
+    "image": "/photo/shaker.jpg",
+    "active": false
+  }
+]

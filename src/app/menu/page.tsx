@@ -138,15 +138,11 @@ export default function MenuPage() {
 
         {/* Footer note */}
         <p className="text-center font-sans-alt text-[9px] tracking-[0.3em] uppercase text-brown-3/50 mt-16">
-          I prezzi includono IVA · Per allergie chiedi al nostro staff
+          Per allergie chiedi al nostro staff
         </p>
       </main>
 
-      <footer className="text-center py-4 border-t border-cream-dark bg-cream">
-        <p className="font-sans-alt text-[9px] tracking-widest text-brown-3 uppercase">
-          Largo Brindisi, 22 — Roma
-        </p>
-      </footer>
+
     </div>
   );
 }
