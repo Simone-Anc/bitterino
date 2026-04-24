@@ -10,7 +10,7 @@ export default function Philosophy() {
   const a = !reduce;
 
   return (
-    <section aria-labelledby="philosophy-heading" className="py-28 px-6 bg-cream">
+    <section aria-labelledby="philosophy-heading" className="py-16 px-6 bg-cream">
       <div ref={ref} className="max-w-6xl mx-auto">
 
         {/* Pull quote */}
@@ -18,7 +18,7 @@ export default function Philosophy() {
           initial={a ? { opacity: 0, y: 20 } : false}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-24 max-w-3xl mx-auto"
+          className="text-center max-w-3xl mx-auto"
           cite="Bitterino"
         >
           <div

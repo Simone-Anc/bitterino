@@ -19,7 +19,7 @@ export default function Contact() {
   const a = !reduce;
 
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="py-28 px-6 bg-cream-mid">
+    <section id="contact" aria-labelledby="contact-heading" className="py-16 px-6 bg-cream-mid">
       <div ref={ref} className="max-w-6xl mx-auto">
 
         {/* Heading */}

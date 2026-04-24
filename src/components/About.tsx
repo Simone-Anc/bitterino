@@ -13,7 +13,7 @@ export default function About() {
   const a = !reduce;
 
   return (
-    <section id="about" aria-labelledby="about-heading" className="py-28 px-6 bg-cream-mid">
+    <section id="about" aria-labelledby="about-heading" className="py-16 px-6 bg-cream-mid">
       <div ref={ref} className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
 

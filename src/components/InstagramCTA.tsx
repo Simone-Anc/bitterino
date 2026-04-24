@@ -11,7 +11,7 @@ export default function InstagramCTA() {
 
   return (
     // bg terra-ui (#8B3A18), cream text — contrasto 6:1 ✓
-    <section aria-label="Seguici su Instagram" className="bg-terra-ui py-20 px-6 overflow-hidden">
+    <section aria-label="Seguici su Instagram" className="bg-terra-ui py-16 px-6 overflow-hidden">
       <motion.div
         ref={ref}
         initial={a ? { opacity: 0, y: 16 } : false}

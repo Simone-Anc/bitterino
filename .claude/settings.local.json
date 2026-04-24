@@ -22,7 +22,9 @@
       "Bash(sips -z 512 512 /tmp/logo_square.png --out /Users/simone/Progetti/bitterino/src/app/icon.png)",
       "Bash(sips -g pixelWidth -g pixelHeight /Users/simone/Progetti/bitterino/src/app/icon.png)",
       "Bash(sips -c 426 426 /Users/simone/Progetti/bitterino/public/photo/logo.png --out /tmp/logo_sq.png)",
-      "Bash(sips -z 512 512 /tmp/logo_sq.png --out /Users/simone/Progetti/bitterino/src/app/icon.png)"
+      "Bash(sips -z 512 512 /tmp/logo_sq.png --out /Users/simone/Progetti/bitterino/src/app/icon.png)",
+      "Bash(sed -i '' s/py-28/py-16/g /Users/simone/Progetti/bitterino/src/components/About.tsx /Users/simone/Progetti/bitterino/src/components/Philosophy.tsx /Users/simone/Progetti/bitterino/src/components/Gallery.tsx /Users/simone/Progetti/bitterino/src/components/Cocktails.tsx /Users/simone/Progetti/bitterino/src/components/Events.tsx /Users/simone/Progetti/bitterino/src/components/Contact.tsx)",
+      "Bash(sed -i '' 's/py-20/py-16/g' /Users/simone/Progetti/bitterino/src/components/InstagramCTA.tsx)"
     ]
   }
 }

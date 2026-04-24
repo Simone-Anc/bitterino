@@ -11,7 +11,7 @@ export default function Cocktails() {
   const a = !reduce;
 
   return (
-    <section id="cocktails" aria-labelledby="cocktails-heading" className="py-28 px-6 bg-cream">
+    <section id="cocktails" aria-labelledby="cocktails-heading" className="py-10 px-6 bg-cream">
       <div ref={ref} className="max-w-6xl mx-auto">
         <motion.div
           initial={a ? { opacity: 0, y: 16 } : false}

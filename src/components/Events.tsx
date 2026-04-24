@@ -31,7 +31,7 @@ export default function Events() {
   const event = events[current];
 
   return (
-    <section id="events" aria-labelledby="events-heading" className="py-28 px-6 bg-cream">
+    <section id="events" aria-labelledby="events-heading" className="py-16 px-6 bg-cream">
       <div ref={ref} className="max-w-5xl mx-auto">
 
         {/* Heading */}
@@ -62,7 +62,7 @@ export default function Events() {
           {/* Card — reel style */}
           <div
             className="relative overflow-hidden"
-            style={{ aspectRatio: "4/5", maxHeight: "600px" }}
+            style={{ aspectRatio: "3/5", maxHeight: "750px" }}
             aria-live="polite"
             aria-atomic="true"
           >
@@ -144,24 +144,6 @@ export default function Events() {
               />
             ))}
           </div>
-        </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          initial={a ? { opacity: 0 } : false}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.5, delay: a ? 0.4 : 0 }}
-          className="mt-12 p-8 border border-terra/20 bg-terra/5 text-center"
-        >
-          <p className="font-display text-xl text-brown-2 italic mb-4">
-            Vuoi organizzare un evento privato o una serata con il tuo gruppo?
-          </p>
-          <a
-            href="#contact"
-            className="font-sans-alt text-[11px] tracking-[0.3em] uppercase text-terra-ui hover:text-terra transition-colors"
-          >
-            Contattaci →
-          </a>
         </motion.div>
       </div>
     </section>

@@ -46,7 +46,7 @@ export default function Hero() {
                      text-cream/70 md:text-terra-ui"
           aria-hidden="true"
         >
-          Cocktail Bar · Roma
+          Cocktail Bar · San Giovanni
         </motion.p>
 
         <motion.h1
@@ -59,7 +59,6 @@ export default function Hero() {
           Bitter
           <span className="terra-gradient font-semibold italic">ino</span>
         </motion.h1>
-
         <div className="divider-terra w-28 mb-6" aria-hidden="true" />
 
         <motion.p

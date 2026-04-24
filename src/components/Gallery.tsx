@@ -35,7 +35,7 @@ export default function Gallery({ posts }: Props) {
     : FALLBACK_PHOTOS.map((p) => ({ ...p, href: "https://www.instagram.com/bitterinoroma" }));
 
   return (
-    <section aria-labelledby="gallery-heading" className="py-28 px-6 bg-cream-mid">
+    <section aria-labelledby="gallery-heading" className="py-16 px-6 bg-cream-mid">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={a ? { opacity: 0, y: 16 } : false}

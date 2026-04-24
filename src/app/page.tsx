@@ -28,9 +28,6 @@ export default async function Home() {
         {/* 1 — Prima impressione */}
         <Hero />
 
-        {/* 3 — Storia e valori del locale */}
-        <About />
-
         {/* 4 — Filosofia / manifesto */}
         <Philosophy />
 
@@ -39,6 +36,9 @@ export default async function Home() {
 
         {/* 6 — Cocktail signature */}
         <Cocktails />
+        
+        {/* 3 — Storia e valori del locale */}
+        <About />
 
         {/* 7 — Serate ed eventi */}
         <Events />
