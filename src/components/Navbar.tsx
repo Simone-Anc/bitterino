@@ -147,9 +147,9 @@ export default function Navbar() {
                     exit={{ y: 20, opacity: 0 }}
                     transition={{ delay: animate ? links.length * 0.06 : 0 }}
                     onClick={() => setMenuOpen(false)}
-                    className="font-sans-alt text-[11px] tracking-[0.3em] uppercase px-8 py-3 bg-terra-ui text-cream hover:bg-terra transition-colors duration-200 inline-block"
-                  >
-                    Sfoglia il Menu
+                    className="font-display text-4xl font-light text-brown-1 hover:text-terra transition-colors"
+                    >
+                    Menu
                   </motion.a>
                 </li>
               </ul>

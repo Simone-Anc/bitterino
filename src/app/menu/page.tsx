@@ -44,7 +44,7 @@ export default function MenuPage() {
         />
 
         <a
-          href="/api/menu"
+          href="/menu.pdf"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Scarica il menu in PDF"
@@ -59,7 +59,7 @@ export default function MenuPage() {
         {/* Title */}
         <div className="text-center mb-12">
           <p className="font-sans-alt text-[10px] tracking-[0.55em] uppercase text-terra-ui mb-4">
-            Bitterino · Roma
+            Bitterino · San Giovanni
           </p>
           <h1 className="font-display text-5xl md:text-6xl font-light text-brown-1 mb-4">
             Il nostro <span className="italic font-medium terra-gradient">Menu</span>
@@ -75,7 +75,7 @@ export default function MenuPage() {
                 <button
                   onClick={() => setActive(cat)}
                   aria-pressed={active === cat}
-                  className={`font-sans-alt text-[10px] tracking-[0.3em] uppercase px-5 py-2.5 border transition-colors duration-200 ${
+                  className={`font-sans-alt text-[10px] tracking-[0.3em] uppercase px-5 py-2.5 border rounded-md transition-colors duration-200 ${
                     active === cat
                       ? "bg-terra-ui text-cream border-terra-ui"
                       : "text-brown-3 border-cream-dark hover:border-terra-ui hover:text-terra-ui"

@@ -56,11 +56,10 @@ export default function Hero() {
           className="font-display text-[clamp(4.5rem,12vw,7rem)] font-light leading-none mb-6
                      text-cream md:text-brown-1"
         >
-          Bitter
-          <span className="terra-gradient font-semibold italic">ino</span>
+          Bitte
+          <span className="terra-gradient font-semibold italic">rino</span>
         </motion.h1>
         <div className="divider-terra w-28 mb-6" aria-hidden="true" />
-
         <motion.p
           initial={a ? { opacity: 0 } : false}
           animate={{ opacity: 1 }}
@@ -81,7 +80,7 @@ export default function Hero() {
         >
           <a
             href="/menu"
-            className="font-sans-alt text-[11px] tracking-[0.3em] uppercase px-9 py-4
+            className="font-sans-alt text-[11px] tracking-[0.3em] rounded-md uppercase px-9 py-4
                        bg-terra-ui text-cream hover:bg-terra transition-colors duration-200"
           >
             Scopri il Menu
@@ -89,7 +88,7 @@ export default function Hero() {
           <a
             href="#about"
             className="font-sans-alt text-[11px] tracking-[0.3em] uppercase px-9 py-4
-                       border text-cream border-cream/40 hover:border-cream hover:text-cream
+                       border rounded-md text-cream border-cream/40 hover:border-cream hover:text-cream
                        md:border-cream-dark md:text-brown-3 md:hover:border-terra-ui md:hover:text-terra-ui
                        transition-colors duration-200"
           >
